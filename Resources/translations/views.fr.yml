@@ -1,0 +1,86 @@
+organization:
+  admin:
+    breadLine:
+      organization:
+        breadcrumb:
+          a:
+            text: Gérer les sociétés
+            title: Gérer les sociétés
+        new:
+          text: Créer une société
+      shortcut:
+        text: Raccourci
+    
+    contentTop:
+      organization:
+        text: Sociétés
+        edit:
+          text: Editer une société
+        new:
+          text: Créer une société
+        show:
+          text: Voir une société
+    
+    fieldset:
+      organization:
+        edit:
+          text: Modifier la société
+        new:
+          text: Nouvelle société
+    
+    general:
+      actions:
+        text: Actions
+    
+    index:
+      organization:
+        text: Sociétés
+    
+    js:
+      remove:
+        text: Enlever
+    
+    mail:
+      actions:
+        text: Actions
+        
+    mainNav:
+      organization:
+        a:
+          title: Sociétés
+          text: Sociétés
+        img:
+          alt: Sociétés
+          
+    row:
+      show:
+        title: Voir
+        
+    secondaryNav:
+      organization:
+        create:
+          a:
+            text: Créer une nouvelle société
+            title: Créer une nouvelle société
+            
+    sidebar:
+      organization:
+        text: Sociétés
+        a:
+          text: Liste des sociétés
+          title: Accéder à la liste des sociétés
+     
+    show:
+      address:
+        text: Adresse
+        empty: Il n'y a pas encore d'adresse
+      at:
+        text: à
+      description:
+        text: Description
+        empty: Il n'y a pas encore de description
+      edit:
+        text: Editer la société
+        title: Editer la société
+      informations:
+        text: Informations

@@ -1,0 +1,45 @@
+{% extends 'BlackAdminBundle::base.html.twig' %}
+{% block body %}
+
+{% if document is not defined %}
+    {% set document = {} %}
+{% endif %}
+
+{% include 'BlackAdminBundle:Admin:header.html.twig' %}
+{% include 'BlackAdminBundle:Admin:sidebar.html.twig' %}
+{% block sidebar_organization %}
+{% include 'BlackOrganizationBundle:AdminOrganization:sidebar.html.twig' with {'document': document, 'mail': true} %}
+{% endblock %}
+
+    {% set admin_index = 'admin_organizations' %}
+    {% set admin_delete = 'admin_organization_delete' %}
+    {% set admin_edit = 'admin_organization_edit' %}
+    {% set admin_new = 'admin_organization_new' %}
+    {% set admin_show = 'admin_organization_show' %}
+
+    <div id="content">
+        {% block content_top %}
+            {% include 'BlackAdminBundle:Admin:contentTop.html.twig' with {'title': "organization.admin.contentTop.organization.text"} %}
+        {% endblock %}
+        {% include 'BlackConfigBundle:Admin:breadLine.html.twig' with {
+            'route': admin_new,
+            'text': "organization.admin.breadLine.organization.new.text",
+            'a_route': admin_index,
+            'a_text': "organization.admin.breadLine.organization.breadcrumb.a.text",
+            'a_title': "organization.admin.breadLine.organization.breadcrumb.a.title"
+            }
+        %}
+        {#  Main content  #}
+        <div class="wrapper">
+
+            {% if form is defined %}
+                {% include 'BlackAdminBundle:AdminForm:errors.html.twig' with {'form': form} %}
+            {% endif %}
+            {% include 'BlackAdminBundle:Admin:flashes.html.twig' with {'flashes': app.session.FlashBag()} %}
+
+            {% block page_content %}{% endblock %}
+
+        </div>
+    </div>
+
+{% endblock %}

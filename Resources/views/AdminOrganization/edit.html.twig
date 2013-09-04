@@ -1,0 +1,17 @@
+{% extends 'BlackOrganizationBundle:AdminOrganization:base.html.twig' %}
+{% block content_top %}
+    {% include 'BlackAdminBundle:Admin:contentTop.html.twig' with {'title': "organization.admin.contentTop.organization.edit.text"} %}
+{% endblock %}
+{% block sidebar_organization %}
+    {% include 'BlackOrganizationBundle:AdminOrganization:sidebar.html.twig' with {'document': document} %}
+{% endblock %}
+{% block page_content %}
+    <div class="fluid">
+        <form id="validate" class="main grid9" action="{{ path('admin_organization_edit', { 'id': document.id }) }}" method="post" {{ form_enctype(form) }}>
+            {% include 'BlackAdminBundle:AdminForm:fieldset.html.twig' with {'form': form, 'title': "organization.admin.fieldset.organization.edit.text"} %}
+        </form>
+        {% include 'BlackAdminBundle:AdminForm:actions.html.twig' with {'document': document} %}
+    </div>
+    {% include 'BlackOrganizationBundle:AdminOrganization:js.html.twig' with {'form': form} %}
+
+{% endblock %}

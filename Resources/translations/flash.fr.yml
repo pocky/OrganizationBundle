@@ -1,0 +1,19 @@
+success:
+  organization:
+    admin:
+      organization:
+        edit: La société a correctement été mis à jour!
+        delete: La société a correctement été supprimée!
+
+error:
+  organization:
+    admin:
+      organization:
+        crsf: Attaque CRSF detectée! C'est pas bien!
+        edit: Il y a une erreur dans votre formulaire !
+        no:
+          item: Vous devez selectionner au moins un élément
+          action: Vous devez selectionner au moins une action pour les éléments selectionnés
+        not:
+          valid: Le formulaire n'est pas valide
+      
