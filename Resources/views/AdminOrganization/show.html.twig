@@ -1,0 +1,91 @@
+{% extends 'BlackOrganizationBundle:AdminOrganization:base.html.twig' %}
+{% block content_top %}
+    {% include 'BlackAdminBundle:Admin:contentTop.html.twig' with {'title': "organization.admin.contentTop.organization.show.text"} %}
+{% endblock %}
+{% block page_content %}
+<div class="fluid" itemscope itemtype="http://schema.org/Person">
+
+    <div class="widget grid3">
+        <div class="whead">
+            <h6>{% trans from "views" %}organization.admin.show.informations.text{% endtrans %}</h6>
+            <div class="titleOpt">
+                <a href="#" data-toggle="dropdown"><span class="icos-cog3"></span><span class="clear"></span></a>
+                <ul class="dropdown-menu pull-right">
+                    <li>
+                        <a href="{{ path(admin_edit, { 'id': document.id }) }}" class="" title="{% trans from "views" %}organization.admin.show.edit.title{% endtrans %}" >
+                            <span class="icos-pencil"></span>{% trans from "views" %}organization.admin.show.edit.text{% endtrans %}
+                        </a>
+                    </li>    
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="body">
+            <p>
+                <span class="fs1 iconb" data-icon="&#xe01e;"> <a href="mailto:{{ document.email}}" itemprop="email">{{ document.email }}</a><br>
+
+            {% if document.url %}
+                <span class="fs1 iconb" data-icon=""></span> <span itemprop="webSite"><a href="{{ document.url }}">{{ document.url }}</a></span><br>
+            {% endif %}
+            </p>
+        </div>
+
+    </div>
+
+    <div class="fluid grid9">
+        <div class="widget">
+            <div class="whead"><h6>{% trans from "views" %}organization.admin.show.description.text{% endtrans %}</h6><div class="clear"></div></div>
+            <div class="body" itemprop="description">
+                {% if document.description %}
+                    {{ document.description }}
+                {% else %}
+                    <p class="textC">{% trans from "views" %}organization.admin.show.description.empty{% endtrans %}</p>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="widget">
+            <div class="whead"><h6>{% trans from "views" %}organization.admin.show.address.text{% endtrans %}</h6><div class="clear"></div></div>
+            <div class="body">
+                {% for add in document.address %}
+
+                    <address class="grid4 textC" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        {% if 'P' == add.contactType %}
+                            <span class="fs1 iconb" data-icon="&#xe12a;"></span>
+                        {% elseif 'W' == add.contactType %}
+                            <span class="fs1 iconb" data-icon="&#xe060;"></span>
+                        {% endif %}
+
+                        <span itemprop="name">{{ add.name }}</span><br>
+
+                        {% if add.description %}
+                            <span itemprop="description">{{ add.description }}</span><br>
+                        {% endif %}
+
+                        <span itemprop="streetAddress">{{ add.streetAddress }}</span><br>
+
+                        {% if add.complementaryStreetAddress %}
+                            {{ add.complementaryStreetAddress }}<br>
+                        {% endif %}
+
+                        {% if add.postOfficeBoxNumber %}
+                            <span itemprop="postOfficeBoxNumber">{{ add.postOfficeBoxNumber }}</span> <span itemprop="addressLocality">{{ add.addressLocality }}</span><br />
+                        {% else %}
+                            <span itemprop="postalCode">{{ add.postalCode }}</span>  <span itemprop="addressLocality">{{ add.addressLocality }}</span><br>
+                        {% endif %}
+
+                        {% if add.addressCountry or add.addressRegion %}
+                            <span itemprop="addressRegion">{{ add.addressRegion }}</span> <span itemprop="addressCountry">{{ add.addressCountryLocale(locale) }}</span><br>
+                        {% endif %}
+
+                    </address>
+                {%  else %}
+                    <p class="textC">{% trans from "views" %}organization.admin.show.address.empty{% endtrans %}</p>
+                {% endfor %}
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

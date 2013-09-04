@@ -1,0 +1,76 @@
+organization:
+  admin:
+    general:
+      update:
+        submit:
+          value: Mettre à jour
+          
+    organization:
+      address:
+        text: Adresses postales
+      choice:
+        other:
+          text: Autre
+      description:
+        text: Description
+        placeholder: Description de l'entreprise
+      email:
+        text: Adresse mail
+      image:
+        text: Image
+      telephone:
+        text: Numéro de téléphone
+      faxNumber:
+        text: Numéro de fax
+      founder:
+        text: Fondateur
+      name:
+        text: Nom
+      seeks:
+        text: Recherche(s)
+      url:
+        text: Site internet
+     
+    postalAddress:
+      type:
+        text: Type d'adresse
+        empty: Choisir une type d'adresse
+        choice:
+          principal: Principal
+          home: Domicile
+          work: Travail
+          other: Autre
+      name:
+        text: Nom
+      description:
+        text: Description
+      address:
+        street:
+          text: Rue
+        complementary:
+          text: Complément
+        postal:
+          text: Code postal
+        box:
+          text: Boite postal
+        locality:
+          text: Ville
+        region:
+          text: Région
+        country:
+          text: Pays
+          empty: Choisir un pays
+
+    sidebar:
+      mail:
+        submit:
+          value: Envoyer
+    
+    tfoot:
+      select:
+        text: Exécuter une action
+        option:
+          choose: Choisir une action
+          delete: Supprimer
+      submit:
+        value: Envoyer
