@@ -1,60 +1,25 @@
-{% block script %}
 <script type="text/javascript">
-    {% block js %}
-    jQuery(document).ready(function() {
-        var addressCount = {{ form.address|length }};
-        
-        jQuery('#black_organization_organization_form_address').children('.formRow').each(function() {
-            addAddressFormDeleteLink($(this));
-            addressIntegrity();
+    var black_organization_organization_form_addressOld;
+    function black_organization_organization_form_addressIntegrity() {
+        jQuery('#black_organization_organization_form_address div:first-child div.field1 div.grid9 select option').each(function(index, value){
+            if($(value).val() !== 'P' && $(value).val() !== '') {
+                $(value).remove();
+            }
         });
-            
-
-        jQuery('#add-another-address').click(function() {
-            var addressList = jQuery('#black_organization_organization_form_address');
-
-            var newWidget = addressList.attr('data-prototype');
-            newWidget = newWidget.replace(/__name__/g, addressCount);
-            addressCount++;
-
-            var newDiv = jQuery('<div class="formRow noBorderB"></div>').html(newWidget);
-            addAddressFormDeleteLink(newDiv);
-            newDiv.appendTo(addressList);
-            addressIntegrity();
-            JQueryUIApplyStyle(newDiv);
-            return false;
+        var addressFound = 0;
+        jQuery('#black_organization_organization_form_address div:first-child div.field1 div.grid9 select option').each(function(index, value){
+            if($(value).val() === 'P') {
+                addressFound++;
+            }
         });
-        
-        function addressIntegrity() {
-            jQuery('#black_organization_organization_form_address div:first-child div.field1 div.grid9 select option').each(function(index, value){
-                if($(value).val() !== 'P' && $(value).val() !== '') {
-                    $(value).remove();
-                }
-            });
-            jQuery('#black_organization_organization_form_address div:not(:first-child) div.field1 div.grid9 select option').each(function(index, value){
-                if($(value).val() === 'P') {
-                    $(value).remove();
-                }
-            });
+        if(addressFound === 0) {
+            jQuery('#black_organization_organization_form_address div:first-child div.field1 div.grid9 select').append(black_organization_organization_form_addressOld);
         }
-
-        function addAddressFormDeleteLink($tagFormDiv) {
-            var $removeFormB = $('<a href="#" class="add buttonS bRed mt10">{% trans  from "views" %}organization.admin.js.remove.text{% endtrans %}</a>');
-            $tagFormDiv.append($removeFormB);
-
-            $removeFormB.on('click', function(e) {
-                addressCount--;
-                e.preventDefault();
-                $tagFormDiv.remove();
-                addressIntegrity();
-            });
-        }
-        
-        function JQueryUIApplyStyle($newDiv) {
-            $newDiv.find("select, .check, .check :checkbox, input:radio, input:file").uniform();
-        }
-    });
-
-    {% endblock %}
+        jQuery('#black_organization_organization_form_address div:not(:first-child) div.field1 div.grid9 select option').each(function(index, value){
+            if($(value).val() === 'P') {
+                black_organization_organization_form_addressOld = $(value);
+                $(value).remove();
+            }
+        });
+    }
 </script>
-{% endblock %}

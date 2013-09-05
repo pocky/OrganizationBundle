@@ -42,10 +42,9 @@ class SetOrganizationDataSubscriber implements EventSubscriberInterface
      * @param                      $dbDriver
      * @param                      $class
      */
-    public function __construct(FormFactoryInterface $factory, $dbDriver, $class)
+    public function __construct(FormFactoryInterface $factory, $class)
     {
         $this->factory = $factory;
-        $this->dbDriver = $dbDriver;
         $this->class = $class;
     }
 
