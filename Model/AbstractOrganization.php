@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * This file is part of the Black package.
  *
  * (c) Alexandre Balmes <albalmes@gmail.com>
@@ -575,7 +575,7 @@ abstract class AbstractOrganization implements OrganizationInterface
         $this->contactPoints = $value;
     }
 
-    /*
+    /**
      * Add contactPoint to Array
      * 
      * @author SchemaGenerator <dallas62@free.fr>
@@ -589,7 +589,7 @@ abstract class AbstractOrganization implements OrganizationInterface
         $this->contactPoints[] = $value;
     }
 
-    /*
+    /**
      * Remove contactPoint to Array
      * 
      * @author SchemaGenerator <dallas62@free.fr>
@@ -738,7 +738,7 @@ abstract class AbstractOrganization implements OrganizationInterface
         $this->employees = $value;
     }
 
-    /*
+    /**
      * Add employee to Array
      * 
      * @author SchemaGenerator <dallas62@free.fr>
@@ -752,7 +752,7 @@ abstract class AbstractOrganization implements OrganizationInterface
         $this->employees[] = $value;
     }
 
-    /*
+    /**
      * Remove employee to Array
      * 
      * @author SchemaGenerator <dallas62@free.fr>
@@ -835,7 +835,7 @@ abstract class AbstractOrganization implements OrganizationInterface
         $this->events = $value;
     }
 
-    /*
+    /**
      * Add event to Array
      * 
      * @author SchemaGenerator <dallas62@free.fr>
@@ -849,7 +849,7 @@ abstract class AbstractOrganization implements OrganizationInterface
         $this->events[] = $value;
     }
 
-    /*
+    /**
      * Remove event to Array
      * 
      * @author SchemaGenerator <dallas62@free.fr>
@@ -964,7 +964,7 @@ abstract class AbstractOrganization implements OrganizationInterface
         $this->founders = $value;
     }
 
-    /*
+    /**
      * Add founder to Array
      * 
      * @author SchemaGenerator <dallas62@free.fr>
@@ -978,7 +978,7 @@ abstract class AbstractOrganization implements OrganizationInterface
         $this->founders[] = $value;
     }
 
-    /*
+    /**
      * Remove founder to Array
      * 
      * @author SchemaGenerator <dallas62@free.fr>
@@ -1367,7 +1367,7 @@ abstract class AbstractOrganization implements OrganizationInterface
         $this->members = $value;
     }
 
-    /*
+    /**
      * Add member to Array
      * 
      * @author SchemaGenerator <dallas62@free.fr>
@@ -1381,7 +1381,7 @@ abstract class AbstractOrganization implements OrganizationInterface
         $this->members[] = $value;
     }
 
-    /*
+    /**
      * Remove member to Array
      * 
      * @author SchemaGenerator <dallas62@free.fr>
@@ -1528,7 +1528,7 @@ abstract class AbstractOrganization implements OrganizationInterface
         $this->reviews = $value;
     }
 
-    /*
+    /**
      * Add review to Array
      * 
      * @author SchemaGenerator <dallas62@free.fr>
@@ -1542,7 +1542,7 @@ abstract class AbstractOrganization implements OrganizationInterface
         $this->reviews[] = $value;
     }
 
-    /*
+    /**
      * Remove review to Array
      * 
      * @author SchemaGenerator <dallas62@free.fr>
