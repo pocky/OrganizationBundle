@@ -29,7 +29,7 @@ abstract class Organization extends AbstractOrganization
      * 
      * @ORM\ManyToMany(targetEntity="PostalAddress", cascade={"persist", "remove"})
      * @ORM\JoinTable(name="organization_postal_address",
-     *      joinColumns={@ORM\JoinColumn(name="person_id", referencedColumnName="id", onDelete="CASCADE")},
+     *      joinColumns={@ORM\JoinColumn(name="organization_id", referencedColumnName="id", onDelete="CASCADE")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="postal_address_id", referencedColumnName="id", onDelete="CASCADE")}
      *      )
      */

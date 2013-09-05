@@ -26,11 +26,6 @@ class OrganizationType extends AbstractType
     /**
      * @var string
      */
-    protected $dbDriver;
-
-    /**
-     * @var string
-     */
     protected $class;
 
     /**
@@ -42,9 +37,8 @@ class OrganizationType extends AbstractType
      * @param string $dbDriver
      * @param string $class
      */
-    public function __construct($dbDriver, $class)
+    public function __construct($class)
     {
-        $this->dbDriver     = $dbDriver;
         $this->class        = $class;
     }
 
@@ -62,7 +56,7 @@ class OrganizationType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $subscriber = new SetOrganizationDataSubscriber($builder->getFormFactory(), $this->dbDriver, $this->class);
+        $subscriber = new SetOrganizationDataSubscriber($builder->getFormFactory(), $this->class);
         $builder->addEventSubscriber($subscriber);
         
         $builder
@@ -77,8 +71,7 @@ class OrganizationType extends AbstractType
                 'founder',
                 'text',
                 array(
-                    'label'         => 'organization.admin.organization.founder.text',
-                    'required'      => false,
+                    'label'         => 'organization.admin.organization.founder.text'
                 )
             )
             ->add(

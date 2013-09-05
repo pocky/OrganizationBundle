@@ -12,7 +12,6 @@
         </service>
 
         <service id="black_organization.organization.form.type" class="%black_organization.organization.form.type%" scope="request">
-            <argument>%black_organization.db_driver%</argument>
             <argument>%black_organization.organization.model.class%</argument>
             <call method="setManager">
                 <argument type="service" id="black_organization.manager.organization" />

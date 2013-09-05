@@ -4,7 +4,7 @@ organization:
       update:
         submit:
           value: Mettre à jour
-          
+    
     organization:
       address:
         text: Adresses postales
