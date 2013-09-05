@@ -39,6 +39,7 @@ abstract class Organization extends AbstractOrganization
      * {@inheritdoc}
      * 
      * @ORM\Column(name="aggregate_rating", type="string", nullable=true)
+     * @Assert\Type(type="string")
      */
      protected $aggregateRating;
 
@@ -46,12 +47,14 @@ abstract class Organization extends AbstractOrganization
      * {@inheritdoc}
      * 
      * @ORM\Column(name="brand", type="string", nullable=true)
+     * @Assert\Type(type="string")
      */
      protected $brand;
 
     /**
      * {@inheritdoc}
      * 
+     * @Assert\Type(type="string")
      * @ORM\Column(name="contact_point", type="string", nullable=true)
      */
      protected $contactPoint;
@@ -83,6 +86,7 @@ abstract class Organization extends AbstractOrganization
      * {@inheritdoc}
      * 
      * @ORM\Column(name="employee", type="string", nullable=true)
+     * @Assert\Type(type="string")
      */
      protected $employee;
 
@@ -97,6 +101,7 @@ abstract class Organization extends AbstractOrganization
      * {@inheritdoc}
      * 
      * @ORM\Column(name="event", type="string", nullable=true)
+     * @Assert\Type(type="string")
      */
      protected $event;
 
@@ -119,6 +124,7 @@ abstract class Organization extends AbstractOrganization
      * {@inheritdoc}
      * 
      * @ORM\Column(name="founder", type="string", nullable=true)
+     * @Assert\Type(type="string")
      */
      protected $founder;
 
@@ -133,6 +139,7 @@ abstract class Organization extends AbstractOrganization
      * {@inheritdoc}
      * 
      * @ORM\Column(name="founding_date", type="string", nullable=true)
+     * @Assert\Type(type="string")
      */
      protected $foundingDate;
 
@@ -148,6 +155,7 @@ abstract class Organization extends AbstractOrganization
      * {@inheritdoc}
      * 
      * @ORM\Column(name="has_pos", type="string", nullable=true)
+     * @Assert\Type(type="string")
      */
      protected $hasPOS;
 
@@ -179,6 +187,7 @@ abstract class Organization extends AbstractOrganization
      * {@inheritdoc}
      * 
      * @ORM\Column(name="location", type="string", nullable=true)
+     * @Assert\Type(type="string")
      */
      protected $location;
 
@@ -186,6 +195,7 @@ abstract class Organization extends AbstractOrganization
      * {@inheritdoc}
      * 
      * @ORM\Column(name="logo", type="string", nullable=true)
+     * @Assert\Type(type="string")
      */
      protected $logo;
 
@@ -193,6 +203,7 @@ abstract class Organization extends AbstractOrganization
      * {@inheritdoc}
      * 
      * @ORM\Column(name="makes_offer", type="string", nullable=true)
+     * @Assert\Type(type="string")
      */
      protected $makesOffer;
 
@@ -200,6 +211,7 @@ abstract class Organization extends AbstractOrganization
      * {@inheritdoc}
      * 
      * @ORM\Column(name="member", type="string", nullable=true)
+     * @Assert\Type(type="string")
      */
      protected $member;
 
@@ -222,6 +234,7 @@ abstract class Organization extends AbstractOrganization
      * {@inheritdoc}
      * 
      * @ORM\Column(name="owns", type="string", nullable=true)
+     * @Assert\Type(type="string")
      */
      protected $owns;
 
@@ -229,6 +242,7 @@ abstract class Organization extends AbstractOrganization
      * {@inheritdoc}
      * 
      * @ORM\Column(name="review", type="string", nullable=true)
+     * @Assert\Type(type="string")
      */
      protected $review;
 
@@ -243,6 +257,7 @@ abstract class Organization extends AbstractOrganization
      * {@inheritdoc}
      * 
      * @ORM\Column(name="seeks", type="string", nullable=true)
+     * @Assert\Type(type="string")
      */
      protected $seeks;
 
