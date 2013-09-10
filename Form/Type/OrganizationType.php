@@ -13,7 +13,6 @@ namespace Black\Bundle\OrganizationBundle\Form\Type;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
-use Black\Bundle\CommonBundle\Form\Transformer\ValuetoModelsOrNullTransformer;
 use Black\Bundle\OrganizationBundle\Form\EventListener\SetOrganizationDataSubscriber;
 
 /**

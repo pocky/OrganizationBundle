@@ -24,6 +24,8 @@ organization:
         text: Numéro de fax
       founder:
         text: Fondateur
+      founders:
+        text: Fondateurs
       name:
         text: Nom
       seeks:
