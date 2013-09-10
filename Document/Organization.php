@@ -38,7 +38,6 @@ class Organization extends AbstractOrganization
      * {@inheritdoc}
      * 
      * @ODM\String
-     * @Assert\Type(type="string")
      */
      protected $image;
 
